@@ -1,18 +1,29 @@
-# rust-nodejs-parser
+# nodejs-rust-binding
 
-Example of a Rust-Nodejs binding and performance test.
-Parse whitespaces in string using Rust and native Javascript.
+Example of a Rust-Nodejs binding and performance test
+
+> Parse whitespaces in string using Rust and native Javascript.
+
+String to parse:
+``'           pB WLRu\t qpBWLRu\t qZ     oCExn   lFV  iX0M   c j  gL@_  at      zNI&nb\t J IA    '``;
 
 
-## Build Setup
+## Setup
 
-### install rust
-https://www.rust-lang.org/en-US/install.html
+#### install rust
+[Start with Rust]( https://www.rust-lang.org/en-US/install.html "Rust")
+
+#### install nvm (node version manager)
+[mac/linux](https://github.com/creationix/nvm#installation "noder version manager linux mac")
+
+[windows]( https://github.com/coreybutler/nvm-windows "noder version manager for windows")
+  
+***
 
 
 ``` bash
 
-# install neon-cli for rust nodejs bindings
+# install neon-cli for rust nodejs binding
 $ npm install --global neon-cli
 
 # switch node version to 8.9.4
@@ -21,6 +32,15 @@ $ nvm use
 # install dependencies
 $ npm install
 
+# enter neon folder
+$ cd neon
+
+# compile rust
+$ build neon
+
+# back to project directory
+$ cd ..
+
 # run script for performance test
 $ node parser.js
 ```
@@ -28,49 +48,20 @@ $ node parser.js
 
 ## Results
 
-Note: The function calls were processed in arrays for the measurements.
+Note: The function calls were processed in arrays.
 
-1 call
-------
-js function : 0.0422 ms
-Rust Library: 0.0154 ms
-
-200 calls
-------
-js function : 0.4364 ms
-Rust Library: 0.4548 ms
-
-500 calls
-------
-js function : 1.3348 ms
-Rust Library: 1.1595 ms
-
-1000 calls
-------
-js function : 2.5211 ms
-Rust Library: 4.4674 ms
-
-1500 calls
-------
-js function : 3.7939 ms
-Rust Library: 4.3629 ms
-
-1800 calls
-------
-js function : 5.4781 ms
-Rust Library: 3.209 ms
-
-2000 calls
-------
-js function : 7.3445 ms
-Rust Library: 3.4855 ms
-
-10000 calls
-------
-js function : 20.9384 ms
-Rust Library: 16.8017 ms
+| Calls  | Native  | Rust Lib  |   
+|---|---|---|
+|  1 | 0.0422 ms | 0.0154 ms |
+|  200 | 0.4364 ms | 0.4548 ms |
+|  500 | 1.3348 ms | 1.1595 ms | 
+|  1000 | 2.5211 ms | 4.4674 ms | 
+|  1500 | 3.7939 ms | 4.3629 ms | 
+|  1800 | 5.4781 ms | 3.209 ms | 
+|  2000 | 7.3445 ms | 3.4855 ms | 
+|  10000 | 20.9384 ms | 16.8017 ms | 
 
 
-## conclusion
+### conclusion
 
-The actual parsing is done with Rust in half the time, but with several function calls the V8 takes effect and the garbage collector shows its effect. However, this will change after 1800 serial calls and Rust performs much faster.
+The actual parsing is done with Rust in half the time, but with several function calls the V8 takes effect and the garbage collector do his work. However, after 1800 serial calls Rust performs a little bit faster than JS.
