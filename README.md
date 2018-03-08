@@ -6,9 +6,9 @@ Parse whitespaces in string using Rust and native Javascript.
 
 ## Build Setup
 
-
-# install rust
+### install rust
 https://www.rust-lang.org/en-US/install.html
+
 
 ``` bash
 
@@ -71,6 +71,6 @@ js function : 20.9384 ms
 Rust Library: 16.8017 ms
 
 
-# conclusion
+## conclusion
 
 The actual parsing is done with Rust in half the time, but with several function calls the V8 takes effect and the garbage collector shows its effect. However, this will change after 1800 serial calls and Rust performs much faster.
