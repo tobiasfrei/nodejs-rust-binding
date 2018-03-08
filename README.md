@@ -5,8 +5,9 @@ Example of a Rust-Nodejs binding and performance test
 > Parse whitespaces in string using Rust and native Javascript.
 
 String to parse:
-``'           pB WLRu\t qpBWLRu\t qZ     oCExn   lFV  iX0M   c j  gL@_  at      zNI&nb\t J IA    '``;
-
+```javascript
+const parseString = '           pB WLRu\t qpBWLRu\t qZ     oCExn   lFV  iX0M   c j  gL@_  at      zNI&nb\t J IA    ';
+```
 
 ## Setup
 
