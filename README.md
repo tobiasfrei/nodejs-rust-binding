@@ -1,8 +1,6 @@
 # nodejs-rust-binding
 
-Example of a Rust-Nodejs binding and performance test
-
-> Parse whitespaces in string using Rust and native Javascript.
+> Compare the process time between Javascript and Nodejs with Rust. Parse whitespaces in string using Rust with Nodejs and on the other side Javascript only.
 
 String to parse:
 ```javascript
