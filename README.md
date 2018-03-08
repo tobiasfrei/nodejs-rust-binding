@@ -51,7 +51,7 @@ $ node parser.js
 
 Note: The function calls were processed in arrays.
 
-| Calls  | Native  | Rust Lib  |   
+| Calls  | Native  | Rust |   
 |---|---|---|
 |  1 | 0.0422 ms | 0.0154 ms |
 |  200 | 0.4364 ms | 0.4548 ms |
