@@ -1,11 +1,11 @@
 {
-  "name": "neoncrypto",
+  "name": "parser",
   "version": "0.1.0",
-  "description": "Example of a Rust-Nodejs binding",
+  "description": "Example of a Rust-Nodejs binding.",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tobiasfrei/rust-nodejs"
+    "url": "https://github.com/tobiasfrei/rust-nodejs-crypto"
   },
   "author": "Tobias Frei <mail@tobiasfrei.ch>",
   "license": "MIT",
