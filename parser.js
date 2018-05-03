@@ -4,7 +4,7 @@ const SECONDS_IN_MS = 1e+9;
 const MS_IN_NANOSECONDS = 1e+6;
 
 function performTest (testFunction, value) {
-  const tryCount = 1000;
+  const tryCount = 10;
   const total = new Array(tryCount)
     .fill()
     .map(() => {
@@ -34,3 +34,5 @@ const neonAvgDuration = performTest(rust.remove_whitespaces, parseString);
 
 console.log('js function :', Math.round(nativeAvgDuration * 10000) / 10000, 'ms');
 console.log('Rust Library:', Math.round(neonAvgDuration * 10000) / 10000, 'ms');
+
+

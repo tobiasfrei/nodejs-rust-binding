@@ -28,14 +28,14 @@ $ npm install --global neon-cli
 # switch node version to 8.9.4
 $ nvm use
 
-# install dependencies
-$ npm install
-
 # enter neon folder
 $ cd neon
 
+# install dependencies
+$ npm install
+
 # compile rust
-$ build neon
+$ neon build
 
 # back to project directory
 $ cd ..
