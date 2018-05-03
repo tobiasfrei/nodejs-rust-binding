@@ -63,4 +63,4 @@ Note: The function calls were processed in arrays.
 
 ### conclusion
 
-The actual parsing is done with Rust in half the time, but with several function calls the V8 takes effect and the garbage collector do his work. However, after 1800 serial calls Rust performs a little bit faster than JS.
+The actual parsing is done with Rust in half the time, but with several function calls the V8 takes effect and the garbage collector do his work.
